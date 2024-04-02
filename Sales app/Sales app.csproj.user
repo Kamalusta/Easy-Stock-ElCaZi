@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="usercontrols\Alis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrols\Emeliyyat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrols\Hesabatlar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrols\Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrols\Musteriler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrols\Satis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="usercontrols\Mehsullar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

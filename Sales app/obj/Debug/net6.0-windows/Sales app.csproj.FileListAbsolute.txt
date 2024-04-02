@@ -1,0 +1,62 @@
+C:\Users\ekber\Desktop\kamal\Sales app\bin\Debug\net6.0-windows\Sales app.exe
+C:\Users\ekber\Desktop\kamal\Sales app\bin\Debug\net6.0-windows\Sales app.deps.json
+C:\Users\ekber\Desktop\kamal\Sales app\bin\Debug\net6.0-windows\Sales app.runtimeconfig.json
+C:\Users\ekber\Desktop\kamal\Sales app\bin\Debug\net6.0-windows\Sales app.dll
+C:\Users\ekber\Desktop\kamal\Sales app\bin\Debug\net6.0-windows\Sales app.pdb
+C:\Users\ekber\Desktop\kamal\Sales app\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\ekber\Desktop\kamal\Sales app\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\ekber\Desktop\kamal\Sales app\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\ekber\Desktop\kamal\Sales app\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\ekber\Desktop\kamal\Sales app\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\ekber\Desktop\kamal\Sales app\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales app.csproj.AssemblyReference.cache
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales_app.Form1.resources
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales app.csproj.GenerateResource.cache
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales app.AssemblyInfoInputs.cache
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales app.AssemblyInfo.cs
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales app.csproj.CoreCompileInputs.cache
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales app.csproj.CopyComplete
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales app.dll
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\refint\Sales app.dll
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales app.pdb
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales app.genruntimeconfig.cache
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\ref\Sales app.dll
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales_app.Form2.resources
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales_app.usercontrols.Mehsullar.resources
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales_app.usercontrols.Satis.resources
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales_app.usercontrols.Musteriler.resources
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales_app.usercontrols.Hesabatlar.resources
+C:\Users\ekber\Desktop\kamal\Sales app\obj\Debug\net6.0-windows\Sales_app.usercontrols.Alis.resources
+C:\Users\ekber\Desktop\copy\Sales app\bin\Debug\net6.0-windows\Sales app.exe
+C:\Users\ekber\Desktop\copy\Sales app\bin\Debug\net6.0-windows\Sales app.deps.json
+C:\Users\ekber\Desktop\copy\Sales app\bin\Debug\net6.0-windows\Sales app.runtimeconfig.json
+C:\Users\ekber\Desktop\copy\Sales app\bin\Debug\net6.0-windows\Sales app.dll
+C:\Users\ekber\Desktop\copy\Sales app\bin\Debug\net6.0-windows\Sales app.pdb
+C:\Users\ekber\Desktop\copy\Sales app\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\ekber\Desktop\copy\Sales app\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\ekber\Desktop\copy\Sales app\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\ekber\Desktop\copy\Sales app\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\ekber\Desktop\copy\Sales app\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\ekber\Desktop\copy\Sales app\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales app.csproj.AssemblyReference.cache
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales_app.Form1.resources
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales_app.usercontrols.Alis.resources
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales_app.usercontrols.Hesabatlar.resources
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales_app.usercontrols.Mehsullar.resources
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales_app.usercontrols.Musteriler.resources
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales_app.usercontrols.Satis.resources
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales app.csproj.GenerateResource.cache
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales app.AssemblyInfoInputs.cache
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales app.AssemblyInfo.cs
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales app.csproj.CoreCompileInputs.cache
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales app.csproj.CopyComplete
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales app.dll
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\refint\Sales app.dll
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales app.pdb
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales app.genruntimeconfig.cache
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\ref\Sales app.dll
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales_app.usercontrols.Emeliyyat.resources
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales_app.usercontrols.Home.resources
+C:\Users\ekber\Desktop\copy\Sales app\obj\Debug\net6.0-windows\Sales_app.Properties.Resources.resources
