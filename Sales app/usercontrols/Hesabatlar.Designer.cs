@@ -28,284 +28,461 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            ListViewItem listViewItem1 = new ListViewItem("");
+            ListViewItem listViewItem2 = new ListViewItem("");
+            label1 = new Label();
+            panel1 = new Panel();
+            listView1 = new ListView();
+            columnHeader1 = new ColumnHeader();
+            button1 = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            dateTimePicker2 = new DateTimePicker();
+            button2 = new Button();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            groupBox1 = new GroupBox();
+            button3 = new Button();
+            label13 = new Label();
+            label14 = new Label();
+            listView2 = new ListView();
+            columnHeader2 = new ColumnHeader();
+            label15 = new Label();
+            label16 = new Label();
+            label17 = new Label();
+            label18 = new Label();
+            label19 = new Label();
+            label20 = new Label();
+            button5 = new Button();
+            panel1.SuspendLayout();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(457, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 59);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hesabat";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 25.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(531, 2);
+            label1.Name = "label1";
+            label1.Size = new Size(381, 59);
+            label1.TabIndex = 0;
+            label1.Text = "Hesabat (Məhsul)";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1350, 64);
-            this.panel1.TabIndex = 1;
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1575, 64);
+            panel1.TabIndex = 1;
             // 
             // listView1
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(46, 195);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(890, 510);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1 });
+            listView1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            listView1.FullRowSelect = true;
+            listView1.GridLines = true;
+            listView1.Items.AddRange(new ListViewItem[] { listViewItem1 });
+            listView1.Location = new Point(29, 237);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(982, 534);
+            listView1.TabIndex = 2;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
+            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
+            listView1.DoubleClick += listView1_DoubleClick;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "";
-            this.columnHeader1.Width = 80;
+            columnHeader1.Text = "";
+            columnHeader1.Width = 80;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(573, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 29);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Ümumi Hesabat";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(759, 190);
+            button1.Name = "button1";
+            button1.Size = new Size(153, 38);
+            button1.TabIndex = 3;
+            button1.Text = "Anbar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 45);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(119, 34);
-            this.dateTimePicker1.TabIndex = 4;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            dateTimePicker1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(6, 45);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(151, 34);
+            dateTimePicker1.TabIndex = 4;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(195, 45);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(119, 34);
-            this.dateTimePicker2.TabIndex = 5;
+            dateTimePicker2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dateTimePicker2.Format = DateTimePickerFormat.Short;
+            dateTimePicker2.Location = new Point(213, 45);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(152, 34);
+            dateTimePicker2.TabIndex = 5;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(6, 99);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 37);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Hesabla";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(6, 98);
+            button2.Name = "button2";
+            button2.Size = new Size(151, 44);
+            button2.TabIndex = 7;
+            button2.Text = "Hesabla";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(56, 150);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            textBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(33, 198);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(131, 30);
+            textBox1.TabIndex = 8;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(205, 150);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 27);
-            this.textBox2.TabIndex = 9;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            textBox2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(181, 198);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(131, 30);
+            textBox2.TabIndex = 9;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(362, 150);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 27);
-            this.textBox3.TabIndex = 10;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            textBox3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox3.Location = new Point(329, 198);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(131, 30);
+            textBox3.TabIndex = 10;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 127);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 20);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Ada görə";
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(33, 165);
+            label2.Name = "label2";
+            label2.Size = new Size(37, 25);
+            label2.TabIndex = 11;
+            label2.Text = "Ad";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(205, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 20);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Koda görə";
+            label3.AutoSize = true;
+            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(181, 165);
+            label3.Name = "label3";
+            label3.Size = new Size(48, 25);
+            label3.TabIndex = 12;
+            label3.Text = "Kod";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(362, 127);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 20);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Ölkəyə görə";
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(329, 165);
+            label4.Name = "label4";
+            label4.Size = new Size(53, 25);
+            label4.TabIndex = 13;
+            label4.Text = "Ölkə";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(867, 728);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 28);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "0";
+            label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(705, 807);
+            label5.Name = "label5";
+            label5.Size = new Size(23, 25);
+            label5.TabIndex = 14;
+            label5.Text = "0";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(867, 708);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 20);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Mal cəm:";
+            label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label6.AutoSize = true;
+            label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(705, 777);
+            label6.Name = "label6";
+            label6.Size = new Size(128, 25);
+            label6.TabIndex = 15;
+            label6.Text = "Qalıq miqdar:";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(532, 708);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 20);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Ümumi məbləğ:";
+            label7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label7.AutoSize = true;
+            label7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(477, 777);
+            label7.Name = "label7";
+            label7.Size = new Size(135, 25);
+            label7.TabIndex = 17;
+            label7.Text = "Satış məbləği:";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(532, 728);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(24, 28);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "0";
+            label8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label8.AutoSize = true;
+            label8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(477, 807);
+            label8.Name = "label8";
+            label8.Size = new Size(23, 25);
+            label8.TabIndex = 16;
+            label8.Text = "0";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(46, 708);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 20);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Ümumi alış:";
+            label9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label9.AutoSize = true;
+            label9.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(28, 777);
+            label9.Name = "label9";
+            label9.Size = new Size(119, 25);
+            label9.TabIndex = 18;
+            label9.Text = " Alış miqdar:";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(296, 708);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 20);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Ümumi satış:";
+            label10.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label10.AutoSize = true;
+            label10.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(247, 777);
+            label10.Name = "label10";
+            label10.Size = new Size(126, 25);
+            label10.TabIndex = 19;
+            label10.Text = "Satış miqdar:";
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(54, 728);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(24, 28);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "0";
+            label11.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label11.AutoSize = true;
+            label11.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.Location = new Point(36, 807);
+            label11.Name = "label11";
+            label11.Size = new Size(23, 25);
+            label11.TabIndex = 20;
+            label11.Text = "0";
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(296, 728);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(24, 28);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "0";
+            label12.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label12.AutoSize = true;
+            label12.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.Location = new Point(247, 807);
+            label12.Name = "label12";
+            label12.Size = new Size(23, 25);
+            label12.TabIndex = 21;
+            label12.Text = "0";
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.ForeColor = System.Drawing.Color.Maroon;
-            this.groupBox1.Location = new System.Drawing.Point(942, 150);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(320, 142);
-            this.groupBox1.TabIndex = 22;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Satış Analizi";
+            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            groupBox1.BackColor = SystemColors.ControlLight;
+            groupBox1.Controls.Add(dateTimePicker2);
+            groupBox1.Controls.Add(dateTimePicker1);
+            groupBox1.Controls.Add(button2);
+            groupBox1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox1.ForeColor = Color.Maroon;
+            groupBox1.Location = new Point(1183, 80);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(371, 154);
+            groupBox1.TabIndex = 22;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Satış Analizi";
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.Location = new Point(477, 194);
+            button3.Name = "button3";
+            button3.Size = new Size(90, 34);
+            button3.TabIndex = 23;
+            button3.Text = "Təmizlə";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // label13
+            // 
+            label13.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label13.AutoSize = true;
+            label13.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.Location = new Point(915, 777);
+            label13.Name = "label13";
+            label13.Size = new Size(133, 25);
+            label13.TabIndex = 25;
+            label13.Text = "Qalıq məbləğ:";
+            // 
+            // label14
+            // 
+            label14.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label14.AutoSize = true;
+            label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.Location = new Point(915, 807);
+            label14.Name = "label14";
+            label14.Size = new Size(23, 25);
+            label14.TabIndex = 24;
+            label14.Text = "0";
+            // 
+            // listView2
+            // 
+            listView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            listView2.Columns.AddRange(new ColumnHeader[] { columnHeader2 });
+            listView2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            listView2.FullRowSelect = true;
+            listView2.GridLines = true;
+            listView2.Items.AddRange(new ListViewItem[] { listViewItem2 });
+            listView2.Location = new Point(948, 237);
+            listView2.Name = "listView2";
+            listView2.Size = new Size(606, 534);
+            listView2.TabIndex = 26;
+            listView2.UseCompatibleStateImageBehavior = false;
+            listView2.View = View.Details;
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "";
+            columnHeader2.Width = 80;
+            // 
+            // label15
+            // 
+            label15.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            label15.AutoSize = true;
+            label15.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label15.Location = new Point(1484, 777);
+            label15.Name = "label15";
+            label15.Size = new Size(62, 25);
+            label15.TabIndex = 32;
+            label15.Text = "Satış:";
+            // 
+            // label16
+            // 
+            label16.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            label16.AutoSize = true;
+            label16.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label16.Location = new Point(1484, 807);
+            label16.Name = "label16";
+            label16.Size = new Size(23, 25);
+            label16.TabIndex = 31;
+            label16.Text = "0";
+            // 
+            // label17
+            // 
+            label17.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            label17.AutoSize = true;
+            label17.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label17.Location = new Point(1214, 777);
+            label17.Name = "label17";
+            label17.Size = new Size(60, 25);
+            label17.TabIndex = 30;
+            label17.Text = "Alınıb";
+            // 
+            // label18
+            // 
+            label18.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            label18.AutoSize = true;
+            label18.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label18.Location = new Point(1214, 807);
+            label18.Name = "label18";
+            label18.Size = new Size(23, 25);
+            label18.TabIndex = 29;
+            label18.Text = "0";
+            // 
+            // label19
+            // 
+            label19.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            label19.AutoSize = true;
+            label19.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label19.Location = new Point(1335, 777);
+            label19.Name = "label19";
+            label19.Size = new Size(100, 25);
+            label19.TabIndex = 28;
+            label19.Text = "Qaytarılıb:";
+            // 
+            // label20
+            // 
+            label20.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            label20.AutoSize = true;
+            label20.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label20.Location = new Point(1373, 807);
+            label20.Name = "label20";
+            label20.Size = new Size(23, 25);
+            label20.TabIndex = 27;
+            label20.Text = "0";
+            // 
+            // button5
+            // 
+            button5.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            button5.Location = new Point(918, 199);
+            button5.Name = "button5";
+            button5.Size = new Size(94, 29);
+            button5.TabIndex = 38;
+            button5.Text = "Print";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // Hesabatlar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SlateGray;
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.panel1);
-            this.Name = "Hesabatlar";
-            this.Size = new System.Drawing.Size(1350, 835);
-            this.Load += new System.EventHandler(this.Hesabatlar_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Gainsboro;
+            Controls.Add(button5);
+            Controls.Add(label15);
+            Controls.Add(label16);
+            Controls.Add(label17);
+            Controls.Add(label18);
+            Controls.Add(label19);
+            Controls.Add(label20);
+            Controls.Add(listView2);
+            Controls.Add(label13);
+            Controls.Add(label14);
+            Controls.Add(button3);
+            Controls.Add(groupBox1);
+            Controls.Add(label12);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label7);
+            Controls.Add(label8);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(textBox3);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(button1);
+            Controls.Add(listView1);
+            Controls.Add(panel1);
+            Name = "Hesabatlar";
+            Size = new Size(1575, 835);
+            Load += Hesabatlar_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -333,5 +510,17 @@
         private Label label11;
         private Label label12;
         private GroupBox groupBox1;
+        private Button button3;
+        private Label label13;
+        private Label label14;
+        private ListView listView2;
+        private ColumnHeader columnHeader2;
+        private Label label15;
+        private Label label16;
+        private Label label17;
+        private Label label18;
+        private Label label19;
+        private Label label20;
+        private Button button5;
     }
 }

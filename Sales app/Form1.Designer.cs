@@ -28,146 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(0, 136);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(156, 82);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Satis";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(156, 903);
-            this.panel1.TabIndex = 20;
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button7.Location = new System.Drawing.Point(0, 576);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(156, 86);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Əməliyyatlar";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(0, 244);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(156, 82);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Alış";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(0, 689);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 86);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Hesabat";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(0, 456);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 86);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Konturagent";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(0, 31);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(156, 81);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Home";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(0, 355);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(156, 79);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Məhsullar";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            panel2 = new Panel();
+            label1 = new Label();
+            label2 = new Label();
+            button9 = new Button();
+            button10 = new Button();
+            panel2.SuspendLayout();
+            SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SlateGray;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(156, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1439, 903);
-            this.panel2.TabIndex = 21;
+            panel2.BackColor = Color.Gainsboro;
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(button9);
+            panel2.Controls.Add(button10);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1482, 903);
+            panel2.TabIndex = 21;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(682, 246);
+            label1.Name = "label1";
+            label1.Size = new Size(518, 81);
+            label1.TabIndex = 13;
+            label1.Text = "ElCaZi Easy Stock";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(868, 496);
+            label2.Name = "label2";
+            label2.Size = new Size(91, 38);
+            label2.TabIndex = 12;
+            label2.Text = "Anbar";
+            // 
+            // button9
+            // 
+            button9.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            button9.Location = new Point(764, 616);
+            button9.Name = "button9";
+            button9.Size = new Size(326, 73);
+            button9.TabIndex = 11;
+            button9.Text = "Çin";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
+            // button10
+            // 
+            button10.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            button10.Location = new Point(764, 537);
+            button10.Name = "button10";
+            button10.Size = new Size(326, 73);
+            button10.TabIndex = 10;
+            button10.Text = "Ukrayna";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click_1;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1595, 903);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(1500, 950);
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ClientSize = new Size(1482, 903);
+            Controls.Add(panel2);
+            MinimumSize = new Size(1500, 950);
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            WindowState = FormWindowState.Maximized;
+            Load += Form1_Load;
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
-        private Button button4;
-        private Panel panel1;
-        private Button button5;
         private Panel panel2;
-        private Button button6;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button7;
+        private Label label2;
+        private Button button9;
+        private Button button10;
+        private Label label1;
     }
 }

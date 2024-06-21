@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "skmG8mHNUeEbwORwJZ4QTZ35RbUNMljrtDCbFbmagpOCgHVIEHlBbUVBOQOxolqiRmmIrwxu+Z4Es/WIvpvxYg==",
+  "dgSpecHash": "Lp0HeRPPGUpJBgEeFNyH4O30K9lCxL1o3TAMN+NnWFqXmO14xIIinKRgs6xymRhdhaaVRnRZXvVCEhtAWrTNMA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ekber\\Desktop\\copy\\Sales app\\Sales app.csproj",
+  "projectFilePath": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\Sales app.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ekber\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\ekber\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

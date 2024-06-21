@@ -14,10 +14,11 @@ namespace Sales_app.usercontrols
 {
     public partial class Mehsullar : UserControl
     {
-        public Mehsullar()
+        public Mehsullar(SqlConnection conn)
         {
             InitializeComponent();
-            InitializeDatabase();
+            //InitializeDatabase();
+            con = conn;
         }
         private SqlConnection con;
         private SqlDataAdapter adapt;
@@ -43,16 +44,18 @@ namespace Sales_app.usercontrols
                 {
                     item.SubItems.Add(row[i].ToString());
                 }
-                item.SubItems[5].Text = (Math.Round(decimal.Parse(item.SubItems[5].Text), 2)).ToString();
-                item.SubItems[4].Text = (Math.Round(decimal.Parse(item.SubItems[4].Text), 2)).ToString();
+                item.SubItems[5].Text = (Math.Round(decimal.Parse(item.SubItems[5].Text), 0)).ToString();
+                item.SubItems[4].Text = (Math.Round(decimal.Parse(item.SubItems[4].Text), 0)).ToString();
 
                 listView1.Items.Add(item);
+                item.Font = new Font(item.Font, FontStyle.Regular);
             }
             con.Close();
         }
         private void Mehsullar_Load(object sender, EventArgs e)
         {
             mal_siyahi();
+            listView1.Font = new Font(listView1.Font, FontStyle.Bold);
         }
 
         private void clearbtn()
@@ -220,19 +223,20 @@ namespace Sales_app.usercontrols
                 {
                     item.SubItems.Add(row[i].ToString());
                 }
-                item.SubItems[5].Text = (Math.Round(decimal.Parse(item.SubItems[5].Text), 2)).ToString();
-                item.SubItems[4].Text = (Math.Round(decimal.Parse(item.SubItems[4].Text), 2)).ToString();
+                item.SubItems[5].Text = (Math.Round(decimal.Parse(item.SubItems[5].Text), 0)).ToString();
+                item.SubItems[4].Text = (Math.Round(decimal.Parse(item.SubItems[4].Text), 0)).ToString();
 
                 listView1.Items.Add(item);
+                item.Font = new Font(item.Font, FontStyle.Regular);
             }
             con.Close();
             v1 = "";
-
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             clearbtn();
+            mal_siyahi();
         }
     }
 }

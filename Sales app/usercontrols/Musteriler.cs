@@ -15,19 +15,13 @@ namespace Sales_app.usercontrols
 {
     public partial class Musteriler : UserControl
     {
-        public Musteriler()
+        public Musteriler(SqlConnection conn)
         {
             InitializeComponent();
-            InitializeDatabase();
+            con = conn;
         }
         private SqlConnection con;
         private SqlDataAdapter adapt;
-
-        private void InitializeDatabase()
-        {
-            string connectionString = "Data Source=.;Initial Catalog=Anbar;Integrated Security=True;";
-            con = new SqlConnection(connectionString);
-        }
 
         public void musteri_siyahi()
         {
@@ -52,9 +46,10 @@ namespace Sales_app.usercontrols
                 }
                 if (item.SubItems[7].Text == "")
                     item.SubItems[7].Text = "0";
-                item.SubItems[6].Text = (Math.Round(decimal.Parse(item.SubItems[6].Text), 2)).ToString();
-                item.SubItems[7].Text = (Math.Round((decimal.Parse(item.SubItems[6].Text) + decimal.Parse(item.SubItems[7].Text)), 2)).ToString();
+                item.SubItems[6].Text = (Math.Round(decimal.Parse(item.SubItems[6].Text), 0)).ToString();
+                item.SubItems[7].Text = (Math.Round((decimal.Parse(item.SubItems[6].Text) + decimal.Parse(item.SubItems[7].Text)), 0)).ToString();
                 listView1.Items.Add(item);
+                item.Font = new Font(item.Font, FontStyle.Regular);
             }
             con.Close();
         }
@@ -71,7 +66,9 @@ namespace Sales_app.usercontrols
 
         private void Musteriler_Load(object sender, EventArgs e)
         {
+            dateTimePicker1.Value = DateTime.Now;
             musteri_siyahi();
+            listView1.Font = new Font(listView1.Font, FontStyle.Bold);
         }
 
         bool status = false;
@@ -205,11 +202,10 @@ namespace Sales_app.usercontrols
         string add;
         private void button4_Click(object sender, EventArgs e)
         {
-            string query = "select m.musteri_id, m.ad_soyad, m.elaqe,m.unvan, m.menecer, m.kategoriya, sum(s.mebleg) - sum(odendi) " +
-                " from Musteriler m left join Satis s on m.musteri_id=s.musteri_id "+add+
-                " group by m.musteri_id, ad_soyad, elaqe, kategoriya, unvan, menecer, borc";
-            /*query = "select * from Musteriler where status = @sts ";*/
             add = " where m.status = @sts ";
+            
+            /*query = "select * from Musteriler where status = @sts ";*/
+            
             listView1.Items.Clear();
             if (textBox1.Text.Length > 0)
                 add += "and ad_soyad LIKE '" + textBox1.Text + "%'";
@@ -224,9 +220,19 @@ namespace Sales_app.usercontrols
             /*if (textBox6.Text.Length > 0)
                 query += "and borc LIKE '" + textBox6.Text + "%'";*/
 
+            string query = "select m.musteri_id, m.ad_soyad, m.elaqe,m.unvan, m.menecer, m.kategoriya, m.borc, sum(s.mebleg) - sum(odendi) " +
+                " from Musteriler m left join Satis s on m.musteri_id=s.musteri_id " + add +
+                " group by m.musteri_id, ad_soyad, elaqe, kategoriya, unvan, menecer, borc";
+
+
+            string query1 = "select m.musteri_id, m.ad_soyad, m.elaqe,m.unvan, m.menecer, m.kategoriya, m.borc, sum(s.mebleg) - sum(odendi) " +
+               " from Musteriler m left join Satis s on m.musteri_id=s.musteri_id" +
+               " where m.status=@sts " +
+               " group by m.musteri_id, ad_soyad, elaqe, kategoriya, unvan, menecer, borc";
+
             con.Open();
             SqlCommand cmd = new(query, con);
-            cmd.Parameters.AddWithValue("@add", add);
+            //cmd.Parameters.AddWithValue("@add", add);
             cmd.Parameters.AddWithValue("@sts", status);
             adapt = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -238,10 +244,13 @@ namespace Sales_app.usercontrols
                 {
                     item.SubItems.Add(row[i].ToString());
                 }
-                if (item.SubItems[6].Text == "")
-                    item.SubItems[6].Text = "0";
-                item.SubItems[6].Text = (Math.Round(decimal.Parse(item.SubItems[6].Text), 2)).ToString();
+                if (item.SubItems[7].Text == "")
+                    item.SubItems[7].Text = "0";
+                item.SubItems[6].Text = (Math.Round(decimal.Parse(item.SubItems[6].Text), 0)).ToString();
+                item.SubItems[7].Text = (Math.Round((decimal.Parse(item.SubItems[6].Text) + decimal.Parse(item.SubItems[7].Text)), 0)).ToString();
+
                 listView1.Items.Add(item);
+                item.Font = new Font(item.Font, FontStyle.Regular);
             }
             con.Close();
         }
@@ -249,6 +258,7 @@ namespace Sales_app.usercontrols
         private void button5_Click(object sender, EventArgs e)
         {
             clearbtn();
+            musteri_siyahi();
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -275,7 +285,7 @@ namespace Sales_app.usercontrols
                 {
                     if (mebleg != 0)
                     {
-                        string query = "insert into Satis(musteri_id, odendi, tarix, status) values(@musteri, @odendi, @tarix, @status);";
+                        string query = "insert into Satis(musteri_id, mebleg, odendi, tarix, status) values(@musteri, 0, @odendi, @tarix, @status);";
                         SqlCommand cmd = new SqlCommand(query, con);
                         con.Open();
                         cmd.Parameters.AddWithValue("@musteri", id);
@@ -299,11 +309,6 @@ namespace Sales_app.usercontrols
             {          
                 MessageBox.Show("Xəta baş verdi !" + ex.Message);
             }
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

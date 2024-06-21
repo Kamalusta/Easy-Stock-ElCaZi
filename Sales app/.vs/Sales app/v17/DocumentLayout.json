@@ -1,0 +1,142 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A6FEEB70-CE4A-4F36-90D8-22C8A92E1FF7}|Sales app.csproj|c:\\users\\ekber\\desktop\\easy-stock-elcazi- v2\\sales app\\usercontrols\\musteriler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A6FEEB70-CE4A-4F36-90D8-22C8A92E1FF7}|Sales app.csproj|solutionrelative:usercontrols\\musteriler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6FEEB70-CE4A-4F36-90D8-22C8A92E1FF7}|Sales app.csproj|c:\\users\\ekber\\desktop\\easy-stock-elcazi- v2\\sales app\\usercontrols\\emeliyyat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A6FEEB70-CE4A-4F36-90D8-22C8A92E1FF7}|Sales app.csproj|solutionrelative:usercontrols\\emeliyyat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6FEEB70-CE4A-4F36-90D8-22C8A92E1FF7}|Sales app.csproj|c:\\users\\ekber\\desktop\\easy-stock-elcazi- v2\\sales app\\usercontrols\\satis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A6FEEB70-CE4A-4F36-90D8-22C8A92E1FF7}|Sales app.csproj|solutionrelative:usercontrols\\satis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6FEEB70-CE4A-4F36-90D8-22C8A92E1FF7}|Sales app.csproj|c:\\users\\ekber\\desktop\\easy-stock-elcazi- v2\\sales app\\usercontrols\\alis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A6FEEB70-CE4A-4F36-90D8-22C8A92E1FF7}|Sales app.csproj|solutionrelative:usercontrols\\alis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6FEEB70-CE4A-4F36-90D8-22C8A92E1FF7}|Sales app.csproj|c:\\users\\ekber\\desktop\\easy-stock-elcazi- v2\\sales app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6FEEB70-CE4A-4F36-90D8-22C8A92E1FF7}|Sales app.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6FEEB70-CE4A-4F36-90D8-22C8A92E1FF7}|Sales app.csproj|c:\\users\\ekber\\desktop\\easy-stock-elcazi- v2\\sales app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A6FEEB70-CE4A-4F36-90D8-22C8A92E1FF7}|Sales app.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6FEEB70-CE4A-4F36-90D8-22C8A92E1FF7}|Sales app.csproj|c:\\users\\ekber\\desktop\\easy-stock-elcazi- v2\\sales app\\usercontrols\\alis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6FEEB70-CE4A-4F36-90D8-22C8A92E1FF7}|Sales app.csproj|solutionrelative:usercontrols\\alis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Satis.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\usercontrols\\Satis.cs",
+              "RelativeDocumentMoniker": "usercontrols\\Satis.cs",
+              "ToolTip": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\usercontrols\\Satis.cs [Design]",
+              "RelativeToolTip": "usercontrols\\Satis.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T07:35:09.777Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Musteriler.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\usercontrols\\Musteriler.cs",
+              "RelativeDocumentMoniker": "usercontrols\\Musteriler.cs",
+              "ToolTip": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\usercontrols\\Musteriler.cs [Design]",
+              "RelativeToolTip": "usercontrols\\Musteriler.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T07:34:42.832Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Emeliyyat.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\usercontrols\\Emeliyyat.cs",
+              "RelativeDocumentMoniker": "usercontrols\\Emeliyyat.cs",
+              "ToolTip": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\usercontrols\\Emeliyyat.cs [Design]",
+              "RelativeToolTip": "usercontrols\\Emeliyyat.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T07:34:33.081Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAA3wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T07:25:15.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T07:25:12.997Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Alis.cs",
+              "DocumentMoniker": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\usercontrols\\Alis.cs",
+              "RelativeDocumentMoniker": "usercontrols\\Alis.cs",
+              "ToolTip": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\usercontrols\\Alis.cs",
+              "RelativeToolTip": "usercontrols\\Alis.cs",
+              "ViewState": "AQIAAOwAAAAAAAAAAAAAwMsAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T07:20:55.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Alis.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\usercontrols\\Alis.cs",
+              "RelativeDocumentMoniker": "usercontrols\\Alis.cs",
+              "ToolTip": "C:\\Users\\ekber\\Desktop\\Easy-Stock-ElCaZi- v2\\Sales app\\usercontrols\\Alis.cs [Design]",
+              "RelativeToolTip": "usercontrols\\Alis.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T07:20:42.011Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

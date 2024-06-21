@@ -13,6 +13,9 @@
     <Compile Update="usercontrols\Hesabatlar.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="usercontrols\HesabatMusteri.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="usercontrols\Home.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -1,18 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using DGVPrinterHelper;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Sales_app.usercontrols
 {
@@ -21,34 +9,44 @@ namespace Sales_app.usercontrols
         private SqlConnection con;
         private SqlCommand cmd, cmd2, cmd3;
         private SqlDataAdapter adapt;
-        private DataTable dataTable;
-        Form1 form1 = new ();
-        public Satis()
+        public DataTable dataTable2;
+
+
+
+        public Satis(SqlConnection conn)
         {
             InitializeComponent();
-            InitializeDatabase();
+            //InitializeDatabase();//con);
+            con = conn;
 
-            dateTimePicker1.Format= DateTimePickerFormat.Short;
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+
+            dataTable2 = new DataTable();
+            dataTable2.Columns.Add("Malın adı", typeof(string));
+            dataTable2.Columns.Add("Mal id", typeof(string));
+            dataTable2.Columns.Add("Mal kodu", typeof(string));
+            dataTable2.Columns.Add("Ani Qiymət", typeof(string));
+            dataTable2.Columns.Add("Miqdar", typeof(string));
+            dataTable2.Columns.Add("Məbləğ", typeof(string));
         }
 
-        private void InitializeDatabase()
+        private void InitializeDatabase()//SqlConnection con)
         {
             string connectionString = "Data Source=.;Initial Catalog=Anbar;Integrated Security=True;";
             con = new SqlConnection(connectionString);
+
         }
 
         decimal totalSum = 0;
         decimal sumMiq = 0;
-               
 
-        
-public void SumCalc()
+        public void SumCalc()
         {
             totalSum = 0;
             sumMiq = 0;
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                if (row.Cells[5].Value != null && decimal.TryParse(row.Cells[5].Value.ToString(), out decimal cellValue))                
+                if (row.Cells[5].Value != null && decimal.TryParse(row.Cells[5].Value.ToString(), out decimal cellValue))
                     totalSum += cellValue;
                 if (row.Cells[4].Value != null && decimal.TryParse(row.Cells[4].Value.ToString(), out decimal cellValue1))
                     sumMiq += cellValue1;
@@ -69,18 +67,19 @@ public void SumCalc()
             foreach (DataRow row in dt.Rows)
             {
                 ListViewItem item = new ListViewItem(row[0].ToString());
-                for (int i = 1; i < dt.Columns.Count; i++)                
-                    item.SubItems.Add(row[i].ToString());                
-                item.SubItems[5].Text = (Math.Round(decimal.Parse(item.SubItems[5].Text), 2)).ToString();
-                item.SubItems[4].Text = (Math.Round(decimal.Parse(item.SubItems[4].Text), 2)).ToString();
+                for (int i = 1; i < dt.Columns.Count; i++)
+                    item.SubItems.Add(row[i].ToString());
+                item.SubItems[5].Text = (Math.Round(decimal.Parse(item.SubItems[5].Text), 0)).ToString();
+                item.SubItems[4].Text = (Math.Round(decimal.Parse(item.SubItems[4].Text), 0)).ToString();
                 listView2.Items.Add(item);
+                item.Font = new Font(item.Font, FontStyle.Regular);
             }
             con.Close();
         }
 
         public void musteri_siyahi()
         {
-            string query = "select m.musteri_id, m.ad_soyad, m.elaqe,m.unvan, m.menecer, m.kategoriya, sum(s.mebleg) - sum(odendi) " +
+            string query = "select m.musteri_id, m.ad_soyad, m.elaqe, m.unvan, m.menecer, m.kategoriya, sum(s.mebleg) - sum(odendi) " +
                 " from Musteriler m left join Satis s on m.musteri_id=s.musteri_id" +
                 " where m.status=0 " +
                 " group by m.musteri_id, ad_soyad, elaqe, kategoriya, unvan, menecer, borc";
@@ -93,14 +92,15 @@ public void SumCalc()
             foreach (DataRow row in dt.Rows)
             {
                 ListViewItem item = new ListViewItem(row[0].ToString());
-                for (int i = 1; i < dt.Columns.Count; i++)                
+                for (int i = 1; i < dt.Columns.Count; i++)
                     item.SubItems.Add(row[i].ToString());
                 if (item.SubItems[6].Text == "")
                 {
                     item.SubItems[6].Text = "0";
                 }
-                item.SubItems[6].Text = (Math.Round(decimal.Parse(item.SubItems[6].Text), 2)).ToString();
+                item.SubItems[6].Text = (Math.Round(decimal.Parse(item.SubItems[6].Text), 0)).ToString();
                 listView1.Items.Add(item);
+                item.Font = new Font(item.Font, FontStyle.Regular);
             }
             con.Close();
         }
@@ -109,11 +109,12 @@ public void SumCalc()
         {
             try
             {
+                //textBox2.Clear();
                 string value2 = textBox3.Text;
                 string value3 = textBox4.Text;
-                string value4 = (decimal.Parse(textBox3.Text) * int.Parse(textBox4.Text)).ToString();                
+                string value4 = (decimal.Parse(textBox3.Text) * int.Parse(textBox4.Text)).ToString();
 
-                DataRow newRow = form1.dataTable2.NewRow();
+                DataRow newRow = dataTable2.NewRow();
                 newRow["Malın adı"] = mal_adi;
                 newRow["Mal id"] = mal_id;
                 newRow["Mal kodu"] = mal_kod;
@@ -121,11 +122,11 @@ public void SumCalc()
                 newRow["Miqdar"] = value3;
                 newRow["Məbləğ"] = value4;
 
-                form1.dataTable2.Rows.Add(newRow);
+                dataTable2.Rows.Add(newRow);
                 textBox3.Clear();
                 textBox4.Clear();
                 textBox5.Clear();
-                mal_kod = "";                               
+                mal_kod = "";
             }
             catch (Exception)
             {
@@ -151,10 +152,11 @@ public void SumCalc()
                 {
                     item.SubItems.Add(row[i].ToString());
                 }
-                item.SubItems[5].Text = (Math.Round(decimal.Parse(item.SubItems[5].Text), 2)).ToString();
-                item.SubItems[4].Text = (Math.Round(decimal.Parse(item.SubItems[4].Text), 2)).ToString();
+                item.SubItems[5].Text = (Math.Round(decimal.Parse(item.SubItems[5].Text), 0)).ToString();
+                item.SubItems[4].Text = (Math.Round(decimal.Parse(item.SubItems[4].Text), 0)).ToString();
 
                 listView2.Items.Add(item);
+                item.Font = new Font(item.Font, FontStyle.Regular);
             }
             con.Close();
         }
@@ -172,8 +174,8 @@ public void SumCalc()
                 textBox3.Text = selectedItem.SubItems[5].Text;
                 textBox5.Text = mal_kod;
 
-                if (panel4.Visible==true)
-                {                    
+                if (panel4.Visible == true)
+                {
                     textBox12.Text = selectedItem.SubItems[1].Text;
                     textBox11.Text = selectedItem.SubItems[2].Text;
                     textBox10.Text = selectedItem.SubItems[3].Text;
@@ -187,9 +189,10 @@ public void SumCalc()
                 string query1 = "select m.miqdar + coalesce(alish.AlisMiqdar, 0) - coalesce(satish.SatisMiqdar, 0) as QaliqStock from Mallar as m " +
                                 "left join(select mal_id, sum(miqdar) as SatisMiqdar from Satis_Detalli group by mal_id ) as satish on m.mal_id = satish.mal_id " +
                                 "left join(select mal_id, sum(miqdar) as AlisMiqdar from Alis_Detalli group by mal_id ) as alish on m.mal_id = alish.mal_id " +
-                                "where m.mal_id =" + textBox5.Text;
+                                "where m.kod =@kod";
                 SqlCommand cmd = new SqlCommand(query1, con);
                 con.Open();
+                cmd.Parameters.AddWithValue("@kod", textBox5.Text);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
@@ -218,24 +221,9 @@ public void SumCalc()
                     item.SubItems.Add(row[i].ToString());
                 }
                 listView1.Items.Add(item);
+                item.Font = new Font(item.Font, FontStyle.Regular);
             }
             con.Close();
-        }
-
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            secilen = e.RowIndex;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (secilen >= 0)
-            {
-                dataGridView1.Rows.RemoveAt(secilen);
-                SumCalc();
-            }
-            else MessageBox.Show("Seçilmiş sətr yoxdur");
-            secilen = -1;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -266,17 +254,17 @@ public void SumCalc()
                         cmd.Parameters.AddWithValue("@tarix", dateTimePicker1.Value);
                         cmd.Parameters.AddWithValue("@status", status);
                         int primaryKeyValue = Convert.ToInt32(cmd.ExecuteScalar());
-                      /*  if(odendi != totalSum)
-                        {                            
-                            decimal res = totalSum - odendi;
-                            string query4 = "update Musteriler set borc = borc + @res where musteri_id = @musteri";
-                            cmd = new(query4, con, transaction);
-                            *//*if (radioButton1.Checked)
-                                res *= -1;*//*
-                            cmd.Parameters.AddWithValue("@res", res);
-                            cmd.Parameters.AddWithValue("@musteri", musteri_id);
-                            cmd.ExecuteNonQuery();
-                        }*/
+                        /*  if(odendi != totalSum)
+                          {                            
+                              decimal res = totalSum - odendi;
+                              string query4 = "update Musteriler set borc = borc + @res where musteri_id = @musteri";
+                              cmd = new(query4, con, transaction);
+                              *//*if (radioButton1.Checked)
+                                  res *= -1;*//*
+                              cmd.Parameters.AddWithValue("@res", res);
+                              cmd.Parameters.AddWithValue("@musteri", musteri_id);
+                              cmd.ExecuteNonQuery();
+                          }*/
                         foreach (DataGridViewRow row in dataGridView1.Rows)
                         {
                             int id = int.Parse(row.Cells[1].Value.ToString());
@@ -286,7 +274,7 @@ public void SumCalc()
                             string query1 = "select m.miqdar + coalesce(alish.AlisMiqdar, 0) - coalesce(satish.SatisMiqdar, 0) as QaliqStock from Mallar as m " +
                             "left join(select mal_id, sum(miqdar) as SatisMiqdar from Satis_Detalli group by mal_id ) as satish on m.mal_id = satish.mal_id " +
                             "left join(select mal_id, sum(miqdar) as AlisMiqdar from Alis_Detalli group by mal_id ) as alish on m.mal_id = alish.mal_id " +
-                            "where m.mal_id ="+id;
+                            "where m.mal_id =" + id;
 
                             cmd3 = new(query1, con, transaction);
                             object result = cmd3.ExecuteScalar();
@@ -296,8 +284,8 @@ public void SumCalc()
                                 if (sorgu == DialogResult.No)
                                 {
                                     transaction.Rollback();
-                                    MessageBox.Show("Əməliyyat icra edilmədi !");                           
-                                }                                                                 
+                                    MessageBox.Show("Əməliyyat icra edilmədi !");
+                                }
                             }
                             if (radioButton1.Checked)
                                 miqdar *= -1;
@@ -331,12 +319,13 @@ public void SumCalc()
                         con.Close();
                         musteri_siyahi();
                     }
-                    form1.dataTable2.Clear();
+                    dataTable2.Clear();
                     SumCalc();
                     musteri_id = -1;
                     textBox1.Clear();
-                    textBox7.Text = "0,00";
+                    textBox7.Text = "0";
                     label9.Text = "Secilmeyib";
+                    label23.Text = "Secilmeyib";
                 }
                 else MessageBox.Show("Satis ucun mebleg yoxdur");
             }
@@ -348,34 +337,43 @@ public void SumCalc()
         {
             mal_siyahi();
             musteri_siyahi();
-            dataGridView1.DataSource = form1.dataTable2;
+            dataGridView1.DataSource = dataTable2;
             dataGridView1.Columns["Mal id"].Visible = false;
-            dateTimePicker1.Value= DateTime.Today;
+            dataGridView1.Columns[0].Width = 200;
+            dataGridView1.Columns[1].Width = 200;
+            dataGridView1.Columns[2].Width = 200;
+            dataGridView1.Columns[3].Width = 200;
+            dataGridView1.Columns[4].Width = 200;
+            dataGridView1.Columns[5].Width = 200;
+
+            dateTimePicker1.Value = DateTime.Today;
             textBox7.Text = "0";
+            listView1.Font = new Font(listView1.Font, FontStyle.Bold);
+            listView2.Font = new Font(listView2.Font, FontStyle.Bold);
         }
 
         private void textBox7_Click(object sender, EventArgs e)
-        { 
+        {
             textBox7.SelectAll();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)            
-                button3.Text = "Geri qaytar";            
+            if (radioButton1.Checked)
+                button3.Text = "Geri qaytar";
             else
                 button3.Text = "Satış";
         }
 
         private void radioButton1_Click(object sender, EventArgs e)
         {
-            radioButton1.Checked = !radioButton1.Checked;            
+            radioButton1.Checked = !radioButton1.Checked;
         }
 
         private void textBox4_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                button1_Click(sender, e);                        
+                button1_Click(sender, e);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -410,7 +408,7 @@ public void SumCalc()
                         cmd.ExecuteNonQuery();
                         con.Close();
                         MessageBox.Show("Məhsul uğurla əlavə edildi");
-                        panel4.Visible=false;
+                        panel4.Visible = false;
                     }
                     catch (Exception ex)
                     {
@@ -422,10 +420,10 @@ public void SumCalc()
                 else
                     MessageBox.Show("Məlumatları düzgün doldurun");
             }
-            else MessageBox.Show(textBox2.Text + " Bu kodda məhsul var ! Zəhmət olmasa unikal bir kod daxil edin");
+            else MessageBox.Show(textBox11.Text + " Bu kodda məhsul var ! Zəhmət olmasa unikal bir kod daxil edin");
         }
 
-        private void clearbtn()
+        public void clearbtn()
         {
             textBox12.Clear();
             textBox11.Clear();
@@ -441,12 +439,6 @@ public void SumCalc()
             panel4.Visible = false;
         }
 
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        int secilen = -1;
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listView1.SelectedItems.Count > 0)
@@ -454,6 +446,115 @@ public void SumCalc()
                 ListViewItem selectedItem = listView1.SelectedItems[0];
                 musteri_id = int.Parse(selectedItem.Text);
                 label9.Text = selectedItem.SubItems[1].Text;
+                label23.Text = selectedItem.SubItems[1].Text;
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            panel6.Visible = true;
+            panel6.BringToFront();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd1 = new("select ad_soyad from Musteriler where ad_soyad = @ad", con);
+            cmd1.Parameters.AddWithValue("@ad", textBox18.Text);
+            object result = cmd1.ExecuteScalar();
+            con.Close();
+            if (result == null)
+            {
+                decimal value1;
+                if (decimal.TryParse(textBox13.Text, out value1))
+                {
+                    try
+                    {
+                        con.Open();
+                        SqlCommand cmd = new("insert into Musteriler(ad_soyad, elaqe, unvan, menecer, kategoriya, borc, status) values(@ad, @elaqe, @unvan, @menecer, @kategoriya, @borc, @status)", con);
+                        cmd.Parameters.AddWithValue("@ad", textBox18.Text);
+                        cmd.Parameters.AddWithValue("@elaqe", textBox17.Text);
+                        cmd.Parameters.AddWithValue("@unvan", textBox16.Text);
+                        cmd.Parameters.AddWithValue("@menecer", textBox15.Text);
+                        cmd.Parameters.AddWithValue("@kategoriya", textBox14.Text);
+                        cmd.Parameters.AddWithValue("@borc", value1);
+                        cmd.Parameters.AddWithValue("@status", 0);
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Müştəri uğurla əlavə edildi");
+                        panel6.Visible = false;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Xeta bas verdi " + ex);
+                    }
+                    clearbtn();
+                    musteri_siyahi();
+                }
+                else
+                    MessageBox.Show("Məlumatları düzgün doldurun");
+            }
+            else MessageBox.Show(textBox1.Text + " Bu adda müstəri mövcuddur ! Zəhmət olmasa unikal bir ad daxil edin");
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            clearbtn();
+            panel6.Visible = false;
+        }
+
+        private void listView2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox4.Focus();
+            }
+        }
+
+        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox4.Focus();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string title = "";
+            if (radioButton1.Checked)
+            {
+                title = "Geri qayıtma";
+            }
+            else
+            {
+                title = "Satış qaimə";
+            }
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = title + "\n ";
+            printer.SubTitle = $"Tarix:     {dateTimePicker1.Value.ToString("dd.MM.yyyy")} \nMüştəri:  {label23.Text} \nMəbləğ:   {label7.Text} \nÖdədi:     {textBox7.Text} AZN\n ";
+            printer.SubTitleAlignment = StringAlignment.Near;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = false; // Set to false to use the actual column widths
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = dataGridView1.RowCount.ToString() + " adda";
+            printer.FooterSpacing = 15;
+
+            // Set the column widths based on the DataGridView column widths
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
+            {
+                printer.ColumnWidths.Add(column.Name, column.Width - 70);
+            }
+            printer.PrintPreviewDataGridView(dataGridView1);
+        }
+
+        private void dataGridView1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                SumCalc();
             }
         }
     }
